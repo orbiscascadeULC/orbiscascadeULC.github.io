@@ -7,46 +7,66 @@ layout: default
 {% assign kpis = site.data.kpis %}
 <div class="container mt-4">
     <div class="row">
-     <div class="col-sm-9">
-<h2>{%for group in groups%}{%if group.object-id == page.group-id %}<a target="_blank" href="{{group.link}}">{{group.title}}</a>{%endif%}{%endfor%} <small><sup><i class="fas fa-external-link-alt"></i></sup></small></h2>
-<ul>
-    <li>Listserv: <a href="mailto:{{page.listserv}}">{{page.listserv}}</a></li>
-    <li>Chair(s): {%for chair in rosters%}{%if chair.team == page.group-id and chair.role contains "chair" %}<span class="mr-2"><b>{{chair.name}}</b>, {{chair.institution}} </span>{%endif%}{%endfor%}</li>
-    {%for doc in site.data[page.group-id].official_docs%}
-            <li>{%if doc.type%}{{doc.type | capitalize}}: {%endif%}<a href="{{doc.link}}">{{doc.title}}</a></li>
-            {%endfor%}
-</ul>
-<dt>KPI</dt>
-{%for kpi in kpis%}{%if kpi.group contains page.group-id%}<dd class="mb-2"> - {{kpi.text}}</dd>{%endif%}{%endfor%}
-{{content}}
-<div class="card">
-        <div class="card-header">Important Resources</div>
-        <div class="card-body">
-            {%for resource in site.data[page.group-id].resources%}
-            <dt><a href="{{resource.link}}">{{resource.title}}</a></dt>
-            {%if resource.description%}<dd>{{resource.description}}</dd>{%endif%}
-            {%endfor%}
-        </div> 
-</div>
-     </div>
-     <div class="col-sm-3">
+        <div class="col-sm-9">
+            <h2>{%for group in groups%}{%if group.object-id == page.group-id %}<a target="_blank"
+                    href="{{group.link}}">{{group.title}}</a>{%endif%}{%endfor%} <small><sup><i
+                            class="fas fa-external-link-alt"></i></sup></small></h2>
+            <ul class="mb-2">
+                <li>Listserv: <a href="mailto:{{page.listserv}}">{{page.listserv}}</a></li>
+            </ul>
+            <h4>Official Documents</h4>
+            <ul>
+                {%for doc in site.data[page.group-id].official_docs%}
+                <li>{%if doc.type%}{{doc.type | capitalize}}: {%endif%}<a href="{{doc.link}}">{{doc.title}}</a></li>
+                {%endfor%}
+            </ul>
+
+            {%for page in site[page.group-id]%}{%if page.layout == "page" %}
+            {%if forloop.first%}<h3>Group Pages</h3>{%endif%}
+            <a href="{{page.url}}" class="btn btn-info mx-2">{{page.title}}</a>
+            {%endif%}{%endfor%}
+            {{content}}
+            <div class="card mt-3">
+                <div class="card-header">Important Resources</div>
+                <div class="card-body">
+                    {%for resource in site.data[page.group-id].resources%}
+                    <dt><a href="{{resource.link}}">{{resource.title}}</a></dt>
+                    {%if resource.description%}<dd>{{resource.description}}</dd>{%endif%}
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
             <div class="card">
-                    <div class="card-header">Meeting Minutes</div>
-                    <div class="card-body">
-                        {%for minutes in site.data[page.group-id].meeting_minutes%}
-                        <dt><a href="{{minutes.link}}">{{minutes.date}}</a></dt>
-                        {%endfor%}
-                    </div> 
+                <div class="card-header">Meeting Minutes</div>
+                <div class="card-body">
+                    {%for minutes in site.data[page.group-id].meeting_minutes%}
+                    <dt><a href="{{minutes.link}}">{{minutes.date}}</a></dt>
+                    {%endfor%}
+                </div>
             </div>
             <div class="card mt-4">
-                    <div class="card-header">Roster</div>
-                    <div class="card-body">
-                        {%for member in rosters%}
-                        {%if member.team == page.group-id%}
-                        <dt>{%if member.link%} <a href="{{member.link}}">{{member.name}}</a>{%else%}{{member.name}}{%endif%} <a href="mailto:{{member.email}}"><i class="fas fa-envelope"></i></a></dt>
-                        <dd>{%if member.role contains "chair"%} <em>{{member.role | capitalize}}</em><br/>{%endif%}{{member.institution}}</dd>
-                        {%endif%} {%endfor%}
-                    </div> 
+                <div class="card-header">KPI</div>
+                <div class="card-body">
+                    <p>{%for kpi in kpis%}
+                        {%if kpi.group contains page.group-id%}
+                        - {{kpi.text}}
+                        {%endif%}{%endfor%}
+                    </p>
+                </div>
             </div>
 
-</div>
+            <div class="card mt-4">
+                <div class="card-header">Roster</div>
+                <div class="card-body">
+                    {%for member in rosters%}
+                    {%if member.team == page.group-id%}
+                    <dt>{%if member.link%} <a href="{{member.link}}">{{member.name}}</a>{%else%}{{member.name}}{%endif%}
+                        <a href="mailto:{{member.email}}"><i class="fas fa-envelope"></i></a></dt>
+                    <dd>{%if member.role contains "chair"%}
+                        <em>{{member.role | capitalize}}</em><br />{%endif%}{{member.institution}}</dd>
+                    {%endif%} {%endfor%}
+                </div>
+            </div>
+
+        </div>

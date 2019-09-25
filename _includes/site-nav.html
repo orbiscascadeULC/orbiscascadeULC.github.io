@@ -7,7 +7,7 @@
             <div class="collapse navbar-collapse" id="page-nav">
                 <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                                <a class="nav-link" href="{{ '/index.html' | relative_url}}">Home</a>
+                                <a class="nav-link {% if page.title == "Unique and Local Content Team" %}active{% endif %}" href="{{ '/index.html' | relative_url}}">Home</a>
                         </li>
                     {% for group in site.data.groupinfo %}{%unless group.object-id == "ulc" %}
                      <li class="nav-item {% if page.url contains group.object-id %}active{% endif %}">
