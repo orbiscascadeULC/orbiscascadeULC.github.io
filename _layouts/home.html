@@ -18,19 +18,20 @@ layout: default
                         class="mr-2"><b>{{chair.name}}</b>, {{chair.institution}} </span>{%endif%}{%endfor%}</li>
             </ul>
             <h4>Offical Documents</h4>
-            <ul>
+            <ul class="mb-2">
                 {%for doc in site.data[page.group-id].official_docs%}
                 <li>{%if doc.type%}{{doc.type | capitalize}}: {%endif%}<a href="{{doc.link}}">{{doc.title}}</a></li>
                 {%endfor%}
             </ul>
 
+            <h3>Team Pages</h3>
             {%for page in site.pages%}{%if page.layout == "page" %}
-            {%if forloop.first%}<h3>Group Pages</h3>{%endif%}
+          
             <a href="{{page.url}}" class="btn btn-info mx-2">{{page.title}}</a>
             {%endif%}{%endfor%}
 
             {{content}}
-            <div class="card">
+            <div class="card mt-3">
                 <div class="card-header">Important Resources</div>
                 <div class="card-body">
                     {%for resource in site.data[page.group-id].resources%}

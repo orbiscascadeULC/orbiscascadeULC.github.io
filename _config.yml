@@ -41,7 +41,7 @@ description: CollectionBuilder-GH is a template for creating small digital colle
 keywords: ULC, Orbis Cascade Alliance, IR, Archives, OER, Digital Collections
 author: dcnb
 url: https://orbiscascadeULC.github.io
-repository: https://github.com/dcnb/ulc_repo
+repository: https://github.com/orbiscascadeULC/
 fontawesome: true
 bootswatch: 
 permalink: pretty
