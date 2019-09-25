@@ -2,12 +2,6 @@
 title: ULC Team Resources Site
 timezone: UTC
 collections:
-  groups:
-    title: Groups
-    output: true
-  ir:
-    title: IR
-    output: true
   acm:
     title: ACM
     output: true
@@ -17,8 +11,17 @@ collections:
   dcbp:
     title: DCBP
     output: true
+  groups:
+    title: Groups
+    output: true
+  ir:
+    title: IR
+    output: true
   oer:
     title: OER
+    output: true
+  posts:
+    title: Posts
     output: true
   umsils:
     title: UMSILS

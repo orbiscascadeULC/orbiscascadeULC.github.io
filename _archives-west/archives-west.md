@@ -1,7 +1,7 @@
 ---
-layout: group
-permalink: /archives-west/
 title: Archives West Standing Group
+permalink: "/archives-west/"
+layout: group
 group-id: archives-west
 established: 2019 July
 type: Project Group

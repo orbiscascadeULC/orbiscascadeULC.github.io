@@ -1,7 +1,7 @@
 ---
-layout: group
-permalink: /ir/
 title: Institutional Repositories Platform Project Group
+permalink: "/ir/"
+layout: group
 group-id: ir
 established: 2019 July
 type: Project Group
@@ -13,3 +13,4 @@ overview: This IR Platform project group plays a key role in supporting the ULCs
   and service model.
 timeline: FY2020 (July 2019 - June 2020)
 ---
+

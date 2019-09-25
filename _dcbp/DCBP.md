@@ -1,7 +1,7 @@
 ---
-layout: group
-permalink: /dcbp/
 title: Dublin Core Best Practices Standing Group
+permalink: "/dcbp/"
+layout: group
 group-id: dcbp
 established: 2019 July
 type: Project Group

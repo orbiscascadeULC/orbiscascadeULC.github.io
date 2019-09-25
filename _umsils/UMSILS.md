@@ -1,7 +1,7 @@
 ---
-layout: group
-permalink: /umsils/
 title: UMSILS Group
+permalink: "/umsils/"
+layout: group
 group-id: umsils
 established: 2019 July
 type: Project Group

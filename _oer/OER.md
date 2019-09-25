@@ -1,7 +1,7 @@
 ---
-layout: group
-permalink: /oer/
 title: OER Standing Group
+permalink: "/oer/"
+layout: group
 group-id: oer
 established: 2019 July
 type: Project Group
