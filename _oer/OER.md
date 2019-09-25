@@ -1,4 +1,6 @@
 ---
+layout: group
+permalink: /oer/
 title: OER Standing Group
 group-id: oer
 established: 2019 July

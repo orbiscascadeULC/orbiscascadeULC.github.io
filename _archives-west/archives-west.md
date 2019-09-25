@@ -1,4 +1,6 @@
 ---
+layout: group
+permalink: /archives-west/
 title: Archives West Standing Group
 group-id: archives-west
 established: 2019 July

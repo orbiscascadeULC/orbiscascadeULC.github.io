@@ -10,7 +10,6 @@ layout: default
      <div class="col-sm-9">
 <h2>{%for group in groups%}{%if group.object-id == page.group-id %}<a target="_blank" href="{{group.link}}">{{group.title}}</a>{%endif%}{%endfor%} <small><sup><i class="fas fa-external-link-alt"></i></sup></small></h2>
 <ul>
-    <li>Established: {{page.established}}</li>
     <li>Listserv: <a href="mailto:{{page.listserv}}">{{page.listserv}}</a></li>
     <li>Chair(s): {%for chair in rosters%}{%if chair.team == page.group-id and chair.role contains "chair" %}<span class="mr-2"><b>{{chair.name}}</b>, {{chair.institution}} </span>{%endif%}{%endfor%}</li>
     {%for doc in site.data[page.group-id].official_docs%}

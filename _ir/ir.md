@@ -1,6 +1,8 @@
 ---
-title: UMSILS Group
-group-id: umsils
+layout: group
+permalink: /ir/
+title: Institutional Repositories Platform Project Group
+group-id: ir
 established: 2019 July
 type: Project Group
 listserv: ulc-irp@orbiscascade.org
@@ -10,6 +12,4 @@ overview: This IR Platform project group plays a key role in supporting the ULCs
   for a pilot of an Alliance centrally-supported institutional repository (IR) platform
   and service model.
 timeline: FY2020 (July 2019 - June 2020)
-chair: Liza Harrell-Edge, The Evergreen State College
 ---
-

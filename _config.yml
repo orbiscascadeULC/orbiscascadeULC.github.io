@@ -8,12 +8,20 @@ collections:
   ir:
     title: IR
     output: true
-  blog:
-    title: Posts
+  acm:
+    title: ACM
     output: true
-    layout: page
-  posts:
-    title: Posts
+  archives-west:
+    title: Archives West
+    output: true
+  dcbp:
+    title: DCBP
+    output: true
+  oer:
+    title: OER
+    output: true
+  umsils:
+    title: UMSILS
     output: true
   uploads:
     title: Uploads
@@ -29,8 +37,7 @@ description: CollectionBuilder-GH is a template for creating small digital colle
   exhibits on GitHub Pages designed for teaching digital library skills
 keywords: ULC, Orbis Cascade Alliance, IR, Archives, OER, Digital Collections
 author: dcnb
-url: https://dcnb.github.io
-baseurl: "/ulc_repo"
+url: https://orbiscascadeULC.github.io
 repository: https://github.com/dcnb/ulc_repo
 fontawesome: true
 bootswatch: 

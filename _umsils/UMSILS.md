@@ -1,6 +1,8 @@
 ---
-title: Dublin Core Best Practices Standing Group
-group-id: dcbp
+layout: group
+permalink: /umsils/
+title: UMSILS Group
+group-id: umsils
 established: 2019 July
 type: Project Group
 listserv: ulc-irp@orbiscascade.org

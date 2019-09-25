@@ -1,4 +1,6 @@
 ---
+layout: group
+permalink: /acm/
 title: Archives Collection Management Standing Group
 group-id: acm
 established: 2019 July

@@ -9,10 +9,10 @@
                         <li class="nav-item">
                                 <a class="nav-link" href="{{ '/index.html' | relative_url}}">Home</a>
                         </li>
-                    {% for group in site.groups %}
-                     <li class="nav-item {% if page.url contains group.group-id %}active{% endif %}">
-                        <a class="nav-link" href="{{ group.url | relative_url }}">{{ group.group-id | upcase }}</a>
-                    </li>
+                    {% for group in site.data.groupinfo %}{%unless group.object-id == "ulc" %}
+                     <li class="nav-item {% if page.url contains group.object-id %}active{% endif %}">
+                        <a class="nav-link" href="{{ group.object-id | append: '/' | relative_url }}">{{ group.object-id | upcase }}</a>
+                    </li> {% endunless %}
                     {% endfor %}
                 </ul>
                 <script>
