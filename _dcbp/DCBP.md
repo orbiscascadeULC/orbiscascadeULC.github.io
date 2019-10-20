@@ -5,7 +5,7 @@ layout: group
 group-id: dcbp
 established: 2019 July
 type: Project Group
-listserv: ulc-irp@orbiscascade.org
+listserv: ulc-dcbp@orbiscascade.org
 overview: This IR Platform project group plays a key role in supporting the ULCs charge
   to provide broad oversight and leadership for the development, stewardship, and
   dissemination of unique and local content, by identifying, recommending, and planning
