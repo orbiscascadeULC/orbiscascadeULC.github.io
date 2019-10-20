@@ -13,10 +13,22 @@ layout: default
                             class="fas fa-external-link-alt"></i></sup></small></h2>
             <ul>
                 <li>Listserv: <a href="mailto:{{page.listserv}}">{{page.listserv}}</a></li>
-                <li>Chair(s):
-                    {%for chair in rosters%}{%if chair.team == page.group-id and chair.role contains "chair" %}<span
-                        class="mr-2"><b>{{chair.name}}</b>, {{chair.institution}} </span>{%endif%}{%endfor%}</li>
+
             </ul>
+            <div class="card my-4">
+                    <div class="card-header">Roster</div>
+                    <div class="card-body">
+                        <div class="row">
+                        {%for member in rosters%}
+                        {%if member.team == page.group-id%}
+                        <div class="col-4">
+                        <dt>{%if member.link%} <a href="{{member.link}}">{{member.name}}</a>{%else%}{{member.name}}{%endif%}
+                            <a href="mailto:{{member.email}}"><i class="fas fa-envelope"></i></a></dt>
+                        <dd>{%if member.role != "member"%}
+                            <em>{{member.role | capitalize}}</em><br />{%endif%}{{member.institution}}</dd></div>
+                        {%endif%} {%endfor%}</div>
+                    </div>
+                </div>
             <h4>Offical Documents</h4>
             <ul class="mb-2">
                 {%for doc in site.data[page.group-id].official_docs%}
@@ -53,25 +65,14 @@ layout: default
             <div class="card mt-4">
                 <div class="card-header">Groups</div>
                 <div class="card-body">
-                    {% for group in site.groups %}
-                    <dt><a href="{{ group.url | relative_url }}">{{group.group-id | upcase}}</a> | <a
+                    {% for group in site.data.groupinfo %}
+                    <dt><a href="{{ group.object-id | relative_url }}">{{group.object-id | upcase}}</a> | <a
                             href="mailto:{{group.listserv}}"><i class="fas fa-envelope"></i></a></dt>
 
                     {%endfor%}
                 </div>
             </div>
 
-            <div class="card mt-4">
-                <div class="card-header">Roster</div>
-                <div class="card-body">
-                    {%for member in rosters%}
-                    {%if member.team == page.group-id%}
-                    <dt>{%if member.link%} <a href="{{member.link}}">{{member.name}}</a>{%else%}{{member.name}}{%endif%}
-                        <a href="mailto:{{member.email}}"><i class="fas fa-envelope"></i></a></dt>
-                    <dd>{%if member.role != "member"%}
-                        <em>{{member.role | capitalize}}</em><br />{%endif%}{{member.institution}}</dd>
-                    {%endif%} {%endfor%}
-                </div>
-            </div>
+            
 
         </div>
