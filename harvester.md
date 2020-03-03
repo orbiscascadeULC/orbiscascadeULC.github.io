@@ -4,7 +4,6 @@ date: 2019-09-25 18:35:00 Z
 layout: page
 ---
 
-
 {% for p in site.data.harvester %}
 ***
 
