@@ -13,12 +13,4 @@ chair:
 layout: group
 ---
 
-# Testing a bunch of stuff. 
-
-I want to see [results](http://google.com). 
-
-> take me to your leader
->
-> I'll be there
-
-1. drop in a new thing
+# 
