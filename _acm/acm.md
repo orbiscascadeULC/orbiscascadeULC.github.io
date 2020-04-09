@@ -2,9 +2,7 @@
 title: Archives Collection Management Standing Group
 permalink: "/acm/"
 group-id: acm
-established:
-  Key 1: 
-  Key: 
+established: 2019
 type: Standing Group
 listserv: acmsg@orbiscascade.org
 overview: 
